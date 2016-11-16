@@ -1,6 +1,7 @@
 package com.pluralsight.estructuraDatos;
 
-public class Node {
+
+public class Node implements Cloneable{
 
 	String value;
 	 Node next;
@@ -25,6 +26,12 @@ public class Node {
 	public void setPre(Node previous) {
 		this.previous = previous;
 	}
-	
+	public Object clone(){  
+	    try{  
+	        return super.clone();  
+	    }catch(Exception e){ 
+	        return null; 
+	    }
+	}
 
 }
